@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+  }
+  
+  .game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+  }
+  
+  
+  .game__wrapper {
+    background-color: #c0c0c0;
+    border: 20px solid black;
+    padding: 40px;
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .game__title {
+    background-color: black;
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    padding: 30px 60px;
+    clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
+    width: 100%;
+  }
+  
+  .game__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-grow: 1;
+    gap: 60px;
+  }
+  
+  .game__instructions {
+    background-color: black;
+    color: white;
+    padding: 40px;
+    width: 50%;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    text-align: center;
+  }
+  
+  .game__highlight {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .game__controls {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .game__button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 25px 60px;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+
+  }
+  
+  .game__button--click {
+    background-color: red;
+    color: black;
+    border: 6px solid black;
+  }
+  
+  .game__timer {
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    font-size: 2rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+  }
+  
+  .game__score {
+    background-color: black;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    width: 100%;
+    text-align: center;
+  }
+  .game__stats {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .game__timer,
+  .game__clicks {
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    font-size: 2rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+  }
+  
+  .game__button--click {
+    transition: background-color 0.5s ease;
+    color: white;
+    font-weight: bold;
+  }
+  .game__score span {
+    margin-left: 8px;
+  }
+  
+  @keyframes pulse-on-click {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .game__button:active {
+    animation: pulse-on-click 0.2s ease;
+  }
+  
+  

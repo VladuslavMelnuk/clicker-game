@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clicker Game</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="game">
+    <div class="game__wrapper">
+      <h1 class="game__title">Welcome To Clicker Game!</h1>
+
+      <div class="game__main">
+        <div class="game__instructions">
+          <p>
+            In this game you have to <br />
+            click on a button as fast as <br />
+            possible within 10 seconds.
+          </p>
+          <p><strong>Try to click a lot!</strong></p>
+          <p>
+            To begin, press start and <br />
+            when the countdown ends, <br />
+            <span class="game__highlight">click on button!</span>
+          </p>
+        </div>
+
+        <div class="game__controls">
+          <button
+            id="start-button"
+            onclick="startGame()"
+            class="game__button game__button--start"
+          >
+            START
+          </button>
+          <button id="click-button" class="game__button game__button--click">
+            Click!!!
+          </button>
+
+          <div class="game__stats">
+            <div class="game__timer">
+              <span class="game__label">Time:</span>
+              <span id="timer">10</span>
+            </div>
+            <div class="game__clicks">
+              <span class="game__label">Clicks:</span>
+              <span id="click-count">0</span>
+            </div>
+          </div>
+
+          <div class="game__score">
+            Your Best Score:<span>0</span>
+          </div>
+          <div class="game__score">
+            Developer Best Score:<span>27</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="clicker-game.js"></script>
+  </body>
+</html>
